@@ -10,9 +10,9 @@ export async function middleware(req) {
     const isAuthenticated = pathname.includes('/api/auth') || token;
 
     // check if user is authenticated, visits login page
-    if (isAuthenticated && pathname === '/login') {
-        return NextResponse.redirect('/');
-    }
+    // if (isAuthenticated && pathname === '/login') {
+    //     return NextResponse.redirect('/');
+    // }
 
     // check if user is authenticated, allow them to access a proctected route 
     if (isAuthenticated) {
