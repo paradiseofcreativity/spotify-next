@@ -4,7 +4,7 @@ import Meta from '../components/Meta';
 function Login({ providers }) {
   // sign in with spotify
   const onLogin = (provider) => () => {
-    signIn(provider.id, { callbackUrl: process.env.NEXTAUTH_URL });
+    signIn(provider.id, { callbackUrl: '/' });
   };
 
   return (
